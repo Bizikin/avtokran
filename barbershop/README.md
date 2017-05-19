@@ -1,2 +1,0 @@
-# real-barbershop
-Макет Барбершопа
