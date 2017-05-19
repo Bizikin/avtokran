@@ -1,0 +1,57 @@
+.breadcrumb-row {
+	.user {
+		display: none;
+	}
+}
+
+.breadcrumb {
+	.icon {
+		fill: currentColor;
+	}
+	&-row {
+		position: relative;
+		button {
+			position: absolute;
+			right: 0;
+			top: ~"calc((50% - 17px))"; 
+		}
+	}
+}
+
+@media @for-tablet-sm {
+	.breadcrumb-row {
+		.user {
+			display: table;
+			position: absolute;
+			right: 0;
+			top: 12px;
+		}
+		.media {
+			margin-top: 0;
+			&-left {
+				img {
+					width: 35px;
+				}
+			}
+			&-body {
+				width: auto;
+				h4 {
+					font-size: 14px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media @for-phone {
+	.breadcrumb-row {
+		.user {
+			display: none;
+		}
+	}
+	.breadcrumb {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

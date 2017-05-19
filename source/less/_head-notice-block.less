@@ -1,0 +1,47 @@
+.head-notice-block {
+	padding: 25px 0;
+	color: #3b1900;
+	&__bad {
+		background-color: #fff7c0;
+	}
+	&__good {
+		background-color: #eafae1;
+	}
+	.row {
+		div {
+			flex: 1;
+			&:last-of-type {
+				flex: 0.5;
+			}
+		}
+	}
+	.counter {
+		font-size: 20px;
+		color: #725f40;
+	}
+}
+
+@media @for-tablet-sm {
+	.head-notice-block {
+		.row {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@media @for-phone {
+	.head-notice-block {
+		.row {
+			flex-direction: column;
+			align-items: flex-start;
+			br {
+				display: none;
+			}
+		}
+		.counter {
+			margin-top: 15px;
+		}
+	}
+}

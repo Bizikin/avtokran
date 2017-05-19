@@ -1,0 +1,351 @@
+.modal {
+	&-close {
+		position: absolute;
+		top: -2px;
+		right: -55px;
+		opacity: 1;
+		outline: none;
+		z-index: 1000;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&__add-images {
+		z-index: 1060;
+		font-size: 16px;
+		.modal-body {
+			padding: 50px 85px;
+			p {
+				margin-bottom: 10px;
+			}
+			.form-file {
+				margin-bottom: 30px;
+			}
+			.imgs-list-block__item__new {
+				margin-bottom: 20px;
+			}
+		}
+		.input-group {
+			margin-bottom: 20px !important;
+		}
+		.form-control {
+			font-size: 16px;
+			height: 40px;
+			margin-right: 5px;
+		}
+	}
+	&__new-album {
+		.modal-dialog {
+			margin-top: 7.5%;
+		}
+		.modal-body {
+			padding: 25px 85px 50px;
+			h5 {
+				margin-bottom: 20px;
+			}
+			.input-group {
+				margin-bottom: 25px;
+				input {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	&__gallery {
+		.modal-content {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		.modal-dialog {
+			width: @modal-dialog-width;
+			margin: 35px auto 0;
+			max-width: 1600px;
+		}
+		.modal-header {
+			padding: 0;
+			border: none;
+			margin-bottom: 25px;
+			.share {
+				display: inline-block;
+				color: @gallery-text-color;
+				margin-bottom: 0;
+				li {
+					vertical-align: middle;
+					&:first-of-type {
+						margin-bottom: 4px;
+					}
+				}
+			}
+			.hi-res {
+				float: right;
+				color: @gallery-text-color;
+				&:hover {
+					color: @gallery-text-color;
+				}
+			}
+			.btn-toggle {
+				display: inline-block;
+				label {
+					color: @gallery-text-color;
+					padding-left: 35px;
+				}
+				&__control {
+					margin-top: 3px;
+				}
+			}
+			.move-img {
+				position: absolute;
+				right: 0;
+				top: -10px;
+				.input-group {
+					margin-bottom: 0;
+					.dropdown {
+						margin-right: 8px;
+					}
+				}
+			}
+		}
+		.modal-body {
+			padding: 0;
+			.img-info {
+				display: flex;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				/*align-items: baseline;*/
+			}
+			.album-name {
+				color: @gallery-text-color;
+				font-size: 18px;
+				margin-right: 5px;
+				font-weight: bold;
+			}
+			.img-name {
+				color: @gallery-text-color;
+				flex: 1;
+				font-size: 18px;
+				margin-bottom: 0;
+				padding-right: 15px;
+				.title-edit {
+					&__view, &-field {
+						font-weight: normal;
+					}
+				}
+			}
+			.img-count {
+				align-items: center;
+				a {
+					color: @gallery-text-color;
+					font-size: 14px;
+					/*font-weight: bold;*/
+					/*text-transform: uppercase;*/
+					&:hover {
+						color: @gallery-text-color;
+					}
+					&[aria-expanded='false'] {
+						svg {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*1024-1279*/
+@media @for-desktop-sm {
+	.modal {
+		&__gallery {
+			.modal-close {
+				right: 0;
+			}
+			.modal-dialog {
+				height: 100%;
+				width: @modal-dialog-width-sm;
+				margin-top: 20px;
+			}
+			.modal-content {
+				height: 100%;
+			}
+			.modal-header {
+				margin-bottom: 10px;
+				.btn-toggle, .share {
+					margin-left: 15px;
+				}
+				.move-img {
+					margin-right: 50px;
+				}
+				.hi-res {
+					display: none;
+				}
+			}
+			.modal-body {
+				height: 90%;
+				.img-info {
+					width: (@modal-dialog-width-sm - 2);
+					margin: 10px 0;
+					padding: 0 15px;
+				}
+				.album-name, .img-name, .img-count a {
+					color: @gallery-text-color-in;
+				}
+				.img-count a:focus {
+					color: @gallery-text-color-in;
+				}
+			}
+			.gallery-carousel__nav-wrap {
+				position: absolute;
+				bottom: 0;
+				z-index: 10000;
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+			}
+		}
+	}
+}
+
+/*768-1023*/
+@media @for-tablet {
+	.modal {
+		&__gallery {
+			.modal-dialog {
+				height: auto;
+				width: @modal-dialog-width-tablet;
+			}
+			.modal-body {
+				.img-info {
+					width: (@modal-dialog-width-tablet - 2);
+				}
+				.img-name {
+					font-size: 15px;
+				}
+			}
+			.gallery-carousel__nav-wrap {
+				position: static;
+			}
+		}
+	}
+}
+
+/*480-767*/
+@media @for-tablet-sm {
+	.modal {
+		&__gallery {
+			.modal-dialog {
+				width: @modal-dialog-width-tablet-sm;
+				margin: 0 auto !important;
+			}
+			.modal-header {
+				position: absolute;
+				top: 10px;
+				z-index: 1000;
+				.share {
+					color: #fff;
+				}
+			}
+			.modal-body {
+				.img-info {
+					width: (@modal-dialog-width-tablet-sm - 2);
+					position: absolute;
+					bottom: 50px;
+					flex-direction: column;
+					align-items: center;
+					margin: 0 auto;
+					visibility: visible;
+				}
+				.album-name {
+					color: #fff;
+					margin-right: 0;
+					.slash {
+						display: none;
+					}
+				}
+				.img-name {
+					color: #fff;
+					font-size: 14px;
+				}
+				.img-count {
+					display: none;
+				}
+			}
+			.modal-close {
+				top: 7px;
+			}
+			.gallery-carousel__nav.collapse.in {
+				display: none;
+			}
+			.gallery-carousel__nav-wrap {
+				position: absolute;
+			}
+		}
+
+
+
+		&-close {
+			position: absolute;
+			top: -35px;
+			right: 0;
+		}
+		.modal-dialog {
+			margin-top: 50px;
+		}
+		&__add-images {
+			font-size: 14px;
+			.modal-body {
+				padding: 20px;
+			}
+			.imgs-list-block__item__new {
+				display: none;
+			}
+			.input-group {
+				display: block;
+			}
+			.form-control {
+				font-size: 15px;
+				margin-right: 0;
+				padding: 6px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+/* < 479 */
+@media @for-phone {
+	.modal {
+		&__gallery {
+			.modal-dialog {
+				width: 100%;//@modal-dialog-width-phone;
+			}
+			.modal-header {
+				position: static;
+				margin-top: 15px;
+			}
+			.modal-body {
+				.img-info {
+					position: static;
+					width: (@modal-dialog-width-phone - 2);
+					visibility: visible;
+				}
+				.img-name {
+					padding-right: 0;
+					text-align: center;
+					font-size: 14px;
+					margin-bottom: 5px;
+				}
+				.img-count {
+					display: block;
+					margin-bottom: 5px;
+				}
+			}
+			.modal-close {
+				top: 14px;
+			}
+			.gallery-carousel__nav.collapse.in {
+				display: block;
+			}
+			.gallery-carousel__nav-wrap {
+				position: static;
+			}
+		}
+	}
+}

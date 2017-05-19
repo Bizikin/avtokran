@@ -1,0 +1,165 @@
+.user-info-block {
+	padding: 25px 0;
+	margin-bottom: 20px;
+	.user-img {
+		&-edit {
+			width: 50px;
+			height: 50px;
+			background-color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: ~"calc((50% - 25px))";
+			left: ~"calc((50% - 25px))";
+			border-radius: 50%;
+		}
+		&-hover {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.4);
+			border-radius: 50%;
+		}
+		&:hover {
+			.user-img-hover {
+				display: block;
+			}
+		}
+	}
+	.media {
+		overflow: visible;
+	}
+	.media-left {
+		padding-right: 25px;
+		a {
+			position: relative;
+			display: block;
+		}
+		img {
+			border-radius: 50%;
+		}
+	}
+	.media-body {
+		overflow: visible;
+	}
+	.about-me {
+		position: relative;
+		&__text {
+			width: 70%;
+			margin-bottom: 20px;
+			p {
+				margin-bottom: 5px;
+			}
+			a {
+				color: @text-green;
+			}
+		}
+		&__title {
+			.show-more {
+				line-height: 0.1;
+				cursor: pointer;
+				display: none;
+				b {
+					font-size: 24px;
+					font-weight: 500;
+					color: #9c9c9c;
+				}
+			}
+		}
+		.btn-open-full-text {
+			position: absolute;
+			right: 0;
+			top: ~"calc((50% - 17px))";
+		}
+	}
+
+	.media {
+		&.visible-only-phone {
+			.media-top {
+				display: table;
+				margin-bottom: 20px;
+				img, h4 {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				img {
+					padding-right: 15px;
+				}
+			} 
+		}
+	}
+}
+
+.user-info-block {
+	&.album-view {
+
+	}
+} 
+
+/* ================== Media =========================*/
+
+@media @for-tablet-sm {
+	.user-info-block {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		h4 {
+			font-size: 16px;
+		}
+		.media-left, .media-top {
+			img {
+				width: 100px;
+			}
+		}
+		.about-me {
+			&__text {
+				width: 100%;
+				font-size: 14px;
+			}
+			.btn-open-full-text {
+				display: none;
+			}
+			&__title {
+				.show-more {
+					display: inline-block;
+				}
+			}
+		}
+		&.album-view {
+			display: none;
+		}
+	}
+}
+
+
+@media @for-phone	{
+	.user-info-block {
+		padding: 25px 15px 0;
+		.media-left {
+			display: block;
+			margin-bottom: 20px;
+		}
+		.media-body {
+			h4 {
+				display: none;
+			}
+		}
+		.about-me {
+			&__text {
+				margin-bottom: 0;
+			}
+		}
+		&.album-view {
+			display: block;
+			.media-top {
+				margin-bottom: 0 !important;
+			}
+			.about-me {
+				display: none;
+			}
+		}
+	}
+}

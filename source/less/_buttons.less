@@ -1,0 +1,110 @@
+.btn {
+	&-default {
+		&:hover,
+		&:focus,
+		&.focus,  
+		&:active, 
+		&.active,
+		&:active:focus {
+			background-color: transparent;
+			border-color: #7f8080;
+			.box-shadow(none);
+			outline: none;
+		}
+		&:hover {
+			background-color: #f2f2f2;
+		}
+	}
+	&-green {
+		background-color: @btn-green-color;
+		border-color: @btn-green-color;
+		color: #fff;
+		&:hover {
+			background-color: #6fb098;
+			border-color: #6fb098;
+			color: #fff;
+		}
+		&:focus,
+		&.focus,  
+		&:active, 
+		&.active,
+		&:active:focus {
+			background-color: #005e3b;
+			border-color: #005e3b;
+			color: #fff;
+		}
+	}
+	&-trans {
+		background-color: transparent;
+		border-color: #8e8e8e;
+		color: #fff;
+		&:hover,
+		&:focus,
+		&.focus,  
+		&:active, 
+		&.active,
+		&:active:focus {
+			background-color: transparent;
+			border-color: #8e8e8e;
+			color: darken(#fff, 15%);
+		}
+	}
+	&__add-input-group {
+		position: absolute;
+		right: -105px;
+		top: 0;
+		border-color: @input-border;
+	}
+	&__del-input-group {
+		position: absolute;
+		right: -49px;
+		top: 0;
+		border-color: @input-border;
+	}
+	&-move {
+		font-size: 14px;
+		font-weight: normal;
+		&__right {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&-album-open {
+		font-weight: normal;
+		padding: 10px 32px;
+		font-size: 16px;
+	}
+	&-modal {
+		color: @gallery-text-color;
+		background-color: transparent;
+		border: 2px solid #858585 !important;
+		&:hover,
+		&:focus,
+		&.focus,  
+		&:active, 
+		&.active,
+		&:active:focus {
+			color: @gallery-text-color;
+			box-shadow: none !important;
+		}
+		&:hover {
+			background-color: transparent;
+		}
+	}
+	&-anchor {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		&:hover,
+		&:focus,
+		&.focus,  
+		&:active, 
+		&.active,
+		&:active:focus {
+			background-color: transparent;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+}

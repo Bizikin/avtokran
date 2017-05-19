@@ -1,0 +1,48 @@
+body {
+	padding-bottom: 100px;
+}
+
+.container {
+	&__albums {
+		margin-top: 20px;
+	}
+}
+
+.hr_line {
+	border-bottom: 1px solid #cdcdcd;
+}
+
+.icon {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.text-gray {
+	color: @text-gray;
+}
+
+.visible-only-phone {
+	display: none !important;
+}
+
+@media @for-phone {
+	.visible-only-phone {
+		display: inline-block !important;
+	}
+	.invisible-phone {
+		display: none !important;
+	}
+	.container {
+		&__albums {
+			h5 {
+				padding: 0 15px;
+			}
+		}
+	}
+}
+
+@media @for-tablet-sm {
+	.invisible-tablet {
+		display: none !important;
+	}
+}
