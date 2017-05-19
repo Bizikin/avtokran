@@ -7174,7 +7174,7 @@ form.about-form {
   position: relative;
 }
 .slick-carousel__item-hover__btn-group {
-  top: calc(32.5%);
+  top: 43.5%;
   position: absolute;
 }
 .slick-carousel__item.slick-current:hover {
