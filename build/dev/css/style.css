@@ -6602,6 +6602,9 @@ form.about-form {
   margin-bottom: 5px;
   width: 100%;
 }
+.title-edit a:hover {
+  color: #6fb098 !important;
+}
 .title-edit__view {
   font-weight: bold;
 }
@@ -6610,6 +6613,7 @@ form.about-form {
 }
 .title-edit__view:hover {
   cursor: pointer;
+  color: #6fb098 !important;
 }
 .title-edit__view:hover .title-edit-icon {
   display: inline-block;

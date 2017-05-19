@@ -69,6 +69,30 @@
 <!-- ========================== Модальное окно создания нового альбома конец ========================= -->
 
 <!-- ========================== Карусель =============================== -->
+<style>
+  .slick-carousel {
+    display: none;
+  }
+  .user-info-block {
+    padding-top: 40px;
+  }
+  .title-edit-icon {
+    display: none !important;
+  }
+  .imgs-in-album-href {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+  .move-icon {
+    z-index: 100;
+  }
+  .dropdown  {
+    z-index: 100;
+  }
+
+</style>
 <div class="slick-carousel">
   <div class="slick-carousel__item" style="background-image:url(img/img-car_1.png)">
       <div class="slick-carousel__item-hover">
@@ -228,7 +252,7 @@
                             <div class="tile-item" style="background-image:url(img/img_4.png)"></div>
                         </div> <!-- /tile-row -->
                     </div> <!-- /imgs-list-block__item__tile -->
-                    <div class="imgs-list-block__item-hover">
+                    <div class="imgs-list-block__item-hover" >
                         <span class="move-icon"><svg width="25" height="25"><use xlink:href="#icon-move"></use></svg></span>
                         <div class="dropdown dropdown-confirm">
                             <button class="icon-basket btn btn-anchor"  data-toggle="dropdown"><span class="icon"><svg width="12" height="13"><use xlink:href="#icon-basket"></use></svg></span></button>
@@ -240,12 +264,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">12</a>
+                        <span class="imgs-in-album">12</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- /imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Сервировка - варианты</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Сервировка - варианты</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -279,12 +304,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">4</a>
+                        <span class="imgs-in-album">4</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Фрукты</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Фрукты</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -318,12 +344,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">3</a>
+                        <span class="imgs-in-album">3</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Новый альбом 4</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Новый альбом 4</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -357,12 +384,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">9</a>
+                        <span class="imgs-in-album">9</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- /imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Сервировка - варианты</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Сервировка - варианты</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -396,12 +424,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">7</a>
+                        <span class="imgs-in-album">7</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Фрукты</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Фрукты</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -435,12 +464,13 @@
                                 </div>
                             </div>
                         </div> <!-- /dropdown-confirm -->
-                        <a href="album-edit.html" class="imgs-in-album">17</a>
+                        <span class="imgs-in-album">17</span>
+                        <a href="album-edit.html" class="imgs-in-album-href"></a>
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
-                <div class="title-edit title-edit__album-name"> 
-                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                        <span class="title-edit__text">Новый альбом 5</span>
+                <div class="title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" data-object="editTitle">
+                        <span class="title-edit__text" onclick="location.href='album-edit.html';">Новый альбом 5</span>
                         <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                     </div>
                     <div class="title-edit__edit">
@@ -459,9 +489,9 @@
                 <div class="border border-vert"></div>
                 <div class="border border-hor"></div>
             </div>
-            <div class="title-edit title-edit__album-name"> 
-                <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
-                    <span class="title-edit__text">Новый альбом 6</span>
+            <div class="title-edit__album-name"> 
+                <div class="title-edit__view title-edit__view__h6"  data-object="editTitle">
+                    
                     <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                 </div>
                 <div class="title-edit__edit">
