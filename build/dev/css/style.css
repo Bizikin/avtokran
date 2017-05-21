@@ -5907,6 +5907,9 @@ button.close {
   max-width: 1600px;
 }
 .modal__gallery .modal-header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
   padding: 0;
   border: none;
   margin-bottom: 25px;

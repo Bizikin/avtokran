@@ -27,15 +27,26 @@
 .slick-carousel__item.slick-current .btn {
   display: inline-block;
 }
-  .slick-carousel__item:hover .slick-carousel__item-hover {
+.slick-carousel__item-hover {
+  background-color: transparent !important;
+}
+  .slick-arrow:hover .slick-carousel__item-hover, .slick-carousel__item:hover .slick-carousel__item-hover {
     display: flex !important;
-        background-color: rgba(0, 0, 0, 0.5) !important;
         font-size: 0;
   }
   .btn-move__middle {
     margin-top: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .bed {
+       background-color: rgba(0, 0, 0, 0.5) !important;
+       
+ 
   }
 </style>
+
+
 
 <!-- ========================== Модальное окно добавления изображения =============================== -->
 <div class="modal fade modal__add-images" id="modal_add-images" tabindex="-1">
@@ -255,6 +266,14 @@
 <script src="libs/js/bootstrap.min.js"></script>
 <script src="libs/js/slick.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+  $( ".slick-carousel__item" ).mouseenter(function( event ) {
+    $('.slick-carousel__item-hover').addClass('bed');
+  });
 
+  $( ".slick-carousel__item" ).mouseleave(function( event ) {
+    $('.slick-carousel__item-hover').removeClass('bed');
+  });
+</script>
 </body>
 </html>
