@@ -48,7 +48,7 @@ $('.gallery-carousel__nav').slick({
    centerMode: true,
   centerPadding: '60px',
   variableWidth: true,
-  infinite: false,
+  infinite: true,
 
   arrows: false,
   asNavFor: '.gallery-carousel__for',
