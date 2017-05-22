@@ -24,7 +24,6 @@ $('.gallery-carousel__for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   fade: true,
-  infinite: false,
   nextArrow: '<button type="button" class="slick-next"><svg width="35" height="35"><use xlink:href="#icon-carousel-next-corner"></use></svg></button>',
   prevArrow: '<button type="button" class="slick-prev"><svg width="35" height="35"><use xlink:href="#icon-carousel-prev-corner"></use></svg></button>',
   asNavFor: '.gallery-carousel__nav',
@@ -43,12 +42,10 @@ $('.gallery-carousel__for').slick({
 
 $('.gallery-carousel__nav').slick({
   slide: '.slick-carousel__item',
-     slidesToShow: 3,
   slidesToScroll: 1,
    centerMode: true,
   centerPadding: '60px',
   variableWidth: true,
-  infinite: true,
 
   arrows: false,
   asNavFor: '.gallery-carousel__for',
