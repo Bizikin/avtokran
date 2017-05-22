@@ -151,9 +151,13 @@ $('.gallery-carousel__for').slick({
 
 $('.gallery-carousel__nav').slick({
   slide: '.slick-carousel__item',
+     slidesToShow: 3,
   slidesToScroll: 1,
+   centerMode: true,
+  centerPadding: '60px',
   variableWidth: true,
   infinite: false,
+
   arrows: false,
   asNavFor: '.gallery-carousel__for',
   //centerMode: true,
