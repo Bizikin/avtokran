@@ -31,15 +31,25 @@
 /*.gallery-carousel__for .slick-carousel__item {
   height: 450px !important;
 }*/
+.title-edit__album-name {
+  margin-top: 0;
+}
 
-
+.checkbox input:not(checked) + label:before {
+  top: 3px;
+}
 .gallery-carousel .slick-arrow {
   height: 72vh !important;
 }
 .gallery-carousel__for .slick-track {
   height: 72vh !important;
 }
-
+/*.title-edit[data-events="edit"] .title-edit__edit {
+  padding-top: 2px;
+}*/
+  .slick-carousel {
+    display: none;
+  }
 
 .imgs-in-album-href {
     position: absolute;
@@ -69,6 +79,10 @@ z-index: 100;
     display: flex !important;
         background-color: rgba(0, 0, 0, 0.5) !important;
         font-size: 0;
+  }
+
+  .title-edit__edit input {
+    opacity: 1 !important;
   }
 
   
@@ -176,7 +190,7 @@ z-index: 100;
                     <p class="album-name">Сервировка /</p>
                     <div class="img-name">
                       <div class="title-edit"> 
-                        <div class="title-edit__view title-edit__view__h6" title="Редактировать название" data-object="editTitle">
+                        <div class="title-edit__view title-edit__view__h6" title="Редактировать описание" data-object="editTitle">
                           <span class="title-edit__text">Сервировка для стола с букетом орхидей в вазе.</span>
                           <span class="title-edit-icon"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
                         </div>
@@ -453,9 +467,19 @@ z-index: 100;
 <span class="imgs-in-album-href" data-toggle="modal" data-target="#modal_gallery">
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
+
                 <div class="checkbox">
-                    <input type="checkbox" value="" id="img_1">
-                    <label for="img_1"><span>Сервировка 4</span></label>
+                
+                    <div class="title-edit title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название">
+                    <input type="checkbox" value="" id="img_1" >
+                        <label for="img_1" name='ch1' onclick='check1(this)'><span class="title-edit__text">Сервировка 4</span></label>
+                        <span class="title-edit-icon" data-object="editTitle"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
+                    </div>
+                    <div class="title-edit__edit">
+                        <label for="img_1" name='ch2'><input type="text" class="title-edit-field title-edit-field__h6" autofocus data-control="saveTitle" value="Сервировка 4"></label>
+                    </div>
+                </div>
                 </div> <!-- /checkbox -->
             </div> <!-- /imgs-list__item -->   
         </div>
@@ -486,9 +510,19 @@ z-index: 100;
 <span class="imgs-in-album-href" data-toggle="modal" data-target="#modal_gallery">
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="img_2">
-                    <label for="img_2"><span>servirov05</span></label>
+            
+                   <div class="checkbox">
+                
+                    <div class="title-edit title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название">
+                    <input type="checkbox" value="" id="img_2" >
+                        <label for="img_2" name='ch1' onclick='check1(this)'><span class="title-edit__text">servirov05</span></label>
+                        <span class="title-edit-icon" data-object="editTitle"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
+                    </div>
+                    <div class="title-edit__edit">
+                        <label for="img_2" name='ch2'><input type="text" class="title-edit-field title-edit-field__h6" autofocus data-control="saveTitle" value="servirov05"></label>
+                    </div>
+                </div>
                 </div> <!-- /checkbox -->
             </div> <!-- /imgs-list__item -->   
         </div>
@@ -519,10 +553,23 @@ z-index: 100;
 <span class="imgs-in-album-href" data-toggle="modal" data-target="#modal_gallery">
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
+             
+
                 <div class="checkbox">
-                    <input type="checkbox" value="" id="img_3">
-                    <label for="img_3"><span>Набор ароматов Dream Sweet</span></label>
-                </div> <!-- /checkbox -->
+                
+                    <div class="title-edit title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название">
+                    <input type="checkbox" value="" id="img_3" >
+                        <label for="img_3" name='ch1' onclick='check1(this)'><span class="title-edit__text">Набор ароматов Dream Sweet</span></label>
+                        <span class="title-edit-icon" data-object="editTitle"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
+                    </div>
+                    <div class="title-edit__edit">
+                        <label for="img_3" name='ch2'><input type="text" class="title-edit-field title-edit-field__h6" autofocus data-control="saveTitle" value="Набор ароматов Dream Sweet"></label>
+                    </div>
+                </div>
+                </div>
+
+                 <!-- /checkbox -->
             </div> <!-- /imgs-list__item -->   
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3">
@@ -552,10 +599,22 @@ z-index: 100;
 <span class="imgs-in-album-href" data-toggle="modal" data-target="#modal_gallery">
                     </div> <!-- imgs-list-block__item-hover -->
                 </div>
+     
                 <div class="checkbox">
-                    <input type="checkbox" value="" id="img_4">
-                    <label for="img_4"><span>Декоративный набор 5</span></label>
-                </div> <!-- /checkbox -->
+                
+                    <div class="title-edit title-edit__album-name"> 
+                    <div class="title-edit__view title-edit__view__h6" title="Редактировать название">
+                    <input type="checkbox" value="" id="img_4" >
+                        <label for="img_4" name='ch1' onclick='check1(this)'><span class="title-edit__text">Декоративный набор 5</span></label>
+                        <span class="title-edit-icon" data-object="editTitle"><svg width="12" height="12"><use xlink:href="#icon-pen"></use></svg></span>
+                    </div>
+                    <div class="title-edit__edit">
+                        <label for="img_4" name='ch2'><input type="text" class="title-edit-field title-edit-field__h6" autofocus data-control="saveTitle" value="Декоративный набор 5"></label>
+                    </div>
+                </div>
+                </div>
+
+                <!-- /checkbox -->
             </div> <!-- /imgs-list__item -->   
         </div>    
     </div> <!-- /row imgs-list-block -->

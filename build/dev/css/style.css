@@ -7180,6 +7180,10 @@ form.about-form {
   top: 43.5%;
   position: absolute;
 }
+.slick-carousel__item-hover__btn-group button:nth-child(2) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .slick-carousel__item.slick-current:hover {
   cursor: pointer;
 }

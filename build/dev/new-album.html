@@ -41,6 +41,7 @@
   }
   .bed {
        background-color: rgba(0, 0, 0, 0.5) !important;
+       display: block;
   }
 </style>
 
@@ -265,13 +266,9 @@
 <script src="libs/js/slick.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-  $( ".slick-carousel__item" ).mouseenter(function( event ) {
-    $('.slick-carousel__item-hover').addClass('bed');
-  });
 
-  $( ".slick-carousel__item" ).mouseleave(function( event ) {
-    $('.slick-carousel__item-hover').removeClass('bed');
-  });
+
+  
 </script>
 </body>
 </html>
