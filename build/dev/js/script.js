@@ -162,6 +162,15 @@ $('.gallery-carousel__nav').slick({
 });
 
 
+$('.btn-default').click(function() {
+  $('.user-img-hover').fadeIn(300);
+});
+
+$('.btn-green').click(function() {
+  $('.user-img-hover').fadeOut(300);
+});
+
+
 
 $.indPos = function() {
   $('.slick-dots').each(function(){
